@@ -1,1 +1,1 @@
-# Proyecto Java EE INTECAP
+# Proyecto de Java EE en Netbeans INTECAP
