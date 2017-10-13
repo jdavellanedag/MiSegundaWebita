@@ -13,26 +13,33 @@
     </head>
     <body>
         <div>
-            <!--<h3>Correo: <%=//request.getAttribute("correo_usuario")%></h3>-->
             <h3>Correo: ${correo_usuario}</h3>
         </div>
         <div>
-            <!--<h4>Contraseña: <%=//request.getAttribute("contrasena_usuario")%></h4>-->
             <h4>Contraseña: ${contrasena_usuario}</h4>
         </div>
         <div>
-            <!--<h5>Documento: <%=//request.getAttribute("documento_usuario")%></h5>-->
             <h5>Documento: ${documento_usuario}</h5>
         </div>
         <div>
-            <form>
+            <form action="rellenar" method="POST">
                 <div>
-                    <label for="txtTelefono">Contraseña</label>
+                    <label for="txtTelefono">Telefono: </label>
                     <input type="tel" name="telefono" id="txtTelefono" required/>
                 </div>
                 <div>
-                    <label for="txtDireccion">Contraseña</label>
+                    <label for="txtDireccion">Direccion: </label>
                     <input type="text" name="direccion" id="txtDireccion" required/>
+                </div>
+                <div>
+                    <label for="txtEdad">Edad: </label>
+                    <input type="number" name="edad" id="txtEdad" required/>
+                </div>
+                <input type="hidden" value="${correo_usuario}" name="correo"/>
+                <input type="hidden" value="${contrasena_usuario}" name="contrasena"/>
+                <input type="hidden" value="${documento_usuario}" name="documento"/>
+                <div>
+                    <button type="submit">Enviar información</button>
                 </div>
             </form>
         </div>
